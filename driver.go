@@ -13,7 +13,7 @@ import (
 )
 
 func init() {
-	sql.Register("pq-timeouts", timeoutDriver{dialOpen: pq.DialOpen})
+	sql.Register("postgres", timeoutDriver{dialOpen: pq.DialOpen})
 }
 
 type timeoutDriver struct {
